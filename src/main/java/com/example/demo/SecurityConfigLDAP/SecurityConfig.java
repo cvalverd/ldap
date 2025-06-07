@@ -30,6 +30,7 @@ public class SecurityConfig {
                 .requestMatchers("/publico").permitAll()
                 .anyRequest().authenticated()
             )
+            .httpBasic(Customizer.withDefaults())
             .formLogin(Customizer.withDefaults())
             .build();
     }
